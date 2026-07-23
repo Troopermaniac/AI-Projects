@@ -5,6 +5,15 @@ echo        BOOTING THE AUTONOMOUS AI EVOLUTION ENGINE
 echo ========================================================
 echo.
 
+:: Auto-create venv and install dependencies if not present
+if not exist ".\venv\Scripts\activate.bat" (
+    echo [Setup] Virtual environment not found. Creating venv...
+    python -m venv venv
+    call .\venv\Scripts\activate.bat
+    echo [Setup] Installing dependencies from requirements.txt...
+    pip install -r requirements.txt
+)
+
 :: Kill any existing process on port 8000 (AI Router)
 echo [Pre-flight] Killing any existing AI Router processes...
 for /f "tokens=5" %%a in ('netstat -ano ^| findstr LISTENING ^| findstr :8000') do (
