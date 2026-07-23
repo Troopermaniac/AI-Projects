@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+transformers
+torch
+accelerate
+bitsandbytes
+smolagents
+peft
+trl
+datasets
+huggingface_hub
+openai
+requests
+llama-cpp-python
+gguf

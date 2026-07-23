@@ -1,0 +1,37 @@
+# Environments & Python Cache
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# PyTorch / Training Outputs & Weights
+tmp_trainer/
+sandbox/lora_adapter/
+sandbox/evolved_model*/
+sandbox/*.flag
+sandbox/*.gguf
+sandbox/llama_bin_cpu/
+sandbox/llama_cpp_repo/
+
+# Runtime State, Logs & Temporary Files
+sandbox/*.json
+sandbox/*.log
+sandbox/*.flag
+sandbox/*.tmp
+sandbox/*.py
+!sandbox/experiment.py
+!sandbox/experiment_protected_baseline.py
+
+# Event Logs & Build Outputs
+dist/
+logs/*.md
+!logs/README.md
+
+# IDE & OS Configuration
+.idea/
+.vscode/
+.vs/
+.DS_Store
+Thumbs.db
